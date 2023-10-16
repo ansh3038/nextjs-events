@@ -43,7 +43,7 @@ export default function EventsPage({data}){
     return (
         <div className='eventPage container text-center '>
             <h2 className='text-center p-3'>{data.title}</h2>
-            <Image src ={data.image} width={500} height={400} className='mt-2'></Image>
+            <Image src ={data.image} width={500} height={400} alt={data.title} className='mt-2'></Image>
             <p className='m-3'> {data.description}</p>
             <form onSubmit={onSubmit} className='email_registration'>
                 <input type='email' ref={inputEmail}></input>
