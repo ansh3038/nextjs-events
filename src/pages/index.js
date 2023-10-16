@@ -8,18 +8,13 @@ export default function Home({data}) {
       {
         data?.map((ev)=>{
           return (
-            <div className='row'>
-              {
-                console.log(ev.id)
-              }
-          <Link key={ev.id} ref={`/events/${ev.id}`} key={ev.id} passHref className={`row p-5  ${style.textlink}`}>
+          <Link key={ev.id} ref={`/events/${ev.id}`}  passHref className={`row p-5  ${style.textlink}`}>
           <Image src={ev.image} alt = {ev.title} width='600' height='400' className='col-6'></Image>
           <div className='col-4 text-center vertical-center p-5 mt-5 ' >
             <h3>{ev.title}</h3>
             <p>{ev.description}</p>
           </div>
-          </Link>
-          </div>)
+          </Link>)
         })
       }
     </div>            
